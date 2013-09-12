@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Get your walk on</h1>
+  <p id="currentPosition"></p>
+  <form id="walkForm" action="/" method="POST">
+    <label for="location">Current location (address): </label><input type="text" id="location" name="location">
+    <label for="pace">Your approx. pace: </label>
+    <select>
+      <option value="slow" name="pace">Slow</option>
+      <option value="moderate" name="pace">Moderate</option>
+      <option value="fast" name="pace">Brisk</option>
+      <option value="speed" name="pace">Speed walking</option>
+    </select>
+    <label for="time">Walking time (minutes): </label><input type="text" id="time" name="time">
+    <input type="submit" class="submitButton" value="Map my walking route!">
+  </form>
+
+</div>
