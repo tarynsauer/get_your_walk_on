@@ -58,4 +58,13 @@ input, select {
               width: 80%;
               border: 2px solid gray;
               margin: auto;
-              padding-top: 10px;}
+              padding-top: 10px;
+            }
+
+#map-canvas-start { height: 250px;
+              width: 400px;
+              margin: auto;
+              display: block;
+              border: 2px solid gray;
+              margin-left: 0;
+            }

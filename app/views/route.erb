@@ -3,19 +3,16 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="/css/normalize.css">
-
-  <link rel="stylesheet" href="/css/application.css">
-  <script type="text/javascript"
+    <link rel="stylesheet" href="/css/application.css">
+    <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ8F1F_8mW3bF1cYyx-kug1O7HsBZ3EHk&sensor=true">
-  </script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
-  <script src="/js/route.js"></script>
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/js/application.js"></script>
+    <script src="/js/route.js"></script>
 
 </head>
 <body>
-  <div id="map-canvas"></div>
-  <div id="directions_panel" style="margin:20px;background-color:#FFEE77;"></div>
   <div id="points" class="invisible">
     <ul class="invisible">
       <li id="latitude"><%= @latitude %></li>
@@ -24,5 +21,8 @@
       <li id="waypoint_two"><%= @waypoint_two %></li>
     </ul>
   </div>
+  <div id="map-canvas"></div>
+  <div id="directions_panel" style="margin:20px;background-color:#FFEE77;"></div>
+
 </body>
 </html>

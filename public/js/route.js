@@ -8,6 +8,7 @@ console.log(homeLongitude);
 var home = new google.maps.LatLng(homeLatitude,homeLongitude);
 // var home = new google.maps.LatLng(41.8828773,-87.6282421);
 
+
 function initialize() {
   directionsDisplay = new google.maps.DirectionsRenderer();
 
