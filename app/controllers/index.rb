@@ -40,7 +40,7 @@ post '/' do
   @latitude = params[:latitude].to_f
   @longitude = params[:longitude].to_f
 
-  val = (rand(3) * 0.0001 * @distance)
+  val = (0.0001 * @distance)
   p @latitude
   p @longitude
 

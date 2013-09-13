@@ -1,11 +1,12 @@
+$(document).ready( function() {
+
+
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
 var homeLatitude = $('#latitude').html();
-console.log(homeLatitude);
 var homeLongitude = $('#longitude').html();
-console.log(homeLongitude);
-var home = new google.maps.LatLng(homeLatitude,homeLongitude);
+home = new google.maps.LatLng(homeLatitude,homeLongitude);
 // var home = new google.maps.LatLng(41.8828773,-87.6282421);
 
 
@@ -61,3 +62,4 @@ function initialize() {
   });
 
   google.maps.event.addDomListener(window, 'load', initialize);
+  });
