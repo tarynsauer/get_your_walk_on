@@ -5,6 +5,12 @@
   border: 1px dotted black;
 }
 
+html { height: 100% }
+
+body { height: 100%;
+       margin: 0;
+       padding: 0 }
+
 th {
   text-align: left;
 }
@@ -37,3 +43,19 @@ input, select {
   font-weight:    bold;
   color:      #2d525d;
 }
+#map-canvas {
+  height: 35%;
+  width: 35%;
+  margin: auto;
+  display: block;
+  border: 3px solid black; }
+
+/*.invisible {
+  display: none;
+}*/
+
+#map-canvas { height: 80%;
+              width: 80%;
+              border: 2px solid gray;
+              margin: auto;
+              padding-top: 10px;}
