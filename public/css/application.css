@@ -1,8 +1,8 @@
 .container {
   margin: 20px auto;
   width: 600px;
+  height: 100%;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
 }
 
 html { height: 100% }
@@ -11,14 +11,19 @@ body { height: 100%;
        margin: 0;
        padding: 0 }
 
+h1 {
+  color: #2d525d;
+}
+
 th {
   text-align: left;
 }
 label {
+  padding-top: 10px;
   display: block;
   font-weight:    bold;
   font-size: 1em;
-  color:      #2d525d;
+  color: #2d525d;
 }
 input, select {
   display: block;
@@ -50,21 +55,28 @@ input, select {
   display: block;
   border: 3px solid black; }
 
-/*.invisible {
+.invisible {
   display: none;
-}*/
+}
 
-#map-canvas { height: 80%;
-              width: 80%;
-              border: 2px solid gray;
-              margin: auto;
-              padding-top: 10px;
-            }
+#map-canvas {
+  height: 80%;
+  width: 80%;
+  border: 2px solid gray;
+  margin: auto;
+  padding-top: 10px;
+ }
 
-#map-canvas-start { height: 250px;
-              width: 400px;
-              margin: auto;
-              display: block;
-              border: 2px solid gray;
-              margin-left: 0;
-            }
+#map-canvas-start {
+  height: 250px;
+  width: 400px;
+  display: block;
+  border: 2px solid gray;
+  margin-left: 0;
+ }
+
+#directions_panel {
+  margin:20px;
+  font-size: 1.3em;
+  background-color:#FFEE77;"
+}

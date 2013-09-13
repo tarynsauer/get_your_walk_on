@@ -53,10 +53,9 @@ function initialize() {
       // For each route, display summary information.
       for (var i = 0; i < route.legs.length; i++) {
         var routeSegment = i + 1;
-        summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment + '</b><br>';
-        summaryPanel.innerHTML += route.legs[i].home_address + ' to ';
+        summaryPanel.innerHTML += '<b>Starting from: ' + '</b>';
         summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-        summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+        summaryPanel.innerHTML += '<b>Total distance: ' + '</b>' + route.legs[i].distance.text + '<br><br>';
       }
     }
   });
