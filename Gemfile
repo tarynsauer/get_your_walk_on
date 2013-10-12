@@ -19,6 +19,10 @@ gem 'shotgun'
 
 gem "geocoder"
 
+gem 'oauth'
+gem 'twitter'
+gem 'tweetstream'
+
 group :test do
   gem 'faker'
   gem 'rspec'

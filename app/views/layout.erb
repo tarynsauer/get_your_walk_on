@@ -15,6 +15,13 @@
   <title>Get your walk on</title>
 </head>
 <body>
+  <header>
+    <% if @client %>
+      <button><a href="/sign_out">Sign Out</a></button>
+    <% else %>
+      <button><a href="/sign_in">Sign In with Twitter</a></button>
+    <% end %>
+  </header>
   <%= yield %>
 </body>
 </html>
