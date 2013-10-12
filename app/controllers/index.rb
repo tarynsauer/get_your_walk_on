@@ -16,8 +16,7 @@ end
 
 #POST------------------------------------------------------------------
 
-post '/' do
-  p params
+post '/route' do
 
   minutes  = params[:time].to_f
   pace     = params[:pace]
@@ -34,19 +33,19 @@ post '/' do
   end
 
   # if user must enter an address
-  #calculate coordinates before redirecting to
-  #map page
+  # calculate coordinates before redirecting to
+  # map page
 
   @latitude = params[:latitude].to_f
   @longitude = params[:longitude].to_f
 
-  val = (0.00004 * @distance)
+  val = (0.00007 * @distance)
 
-  latitude2 = @latitude + (rand(2) * val)
-  longitude2 = @longitude + (rand(2) * val)
+  latitude2 = @latitude + (rand(4) * val)
+  longitude2 = @longitude + (rand(4) * val)
 
-  latitude3 = @latitude - (rand(2) * val)
-  longitude3 = @longitude - (rand(2) * val)
+  latitude3 = @latitude - (rand(4) * val)
+  longitude3 = @longitude - (rand(4) * val)
 
   # home         = "#{latitude}, #{longitude}"
   @waypoint_one = "#{latitude2}, #{longitude2}"
