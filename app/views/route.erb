@@ -13,16 +13,24 @@
 
 </head>
 <body>
+  <%= erb :_header %>
   <div class="container">
   <h1>Here's your route:</h1>
-  <div id="points">
-    <ul>
-      <li id="latitude"><%= @latitude %></li>
-      <li id="longitude"><%= @longitude %></li>
-      <li id="waypoint_one"><%= @waypoint_one %></li>
-      <li id="waypoint_two"><%= @waypoint_two %></li>
-    </ul>
-  </div>
+  <form name="input" id="points" action="/walks/create" method="post">
+    <input type="hidden" name="user_id" value="<%= current_user.id %>">
+    <input type="hidden" id="latitude" name="latitude" value="<%= @latitude %>">
+    <input type="hidden" id="longitude" name="longitude" value="<%= @longitude %>">
+    <input type="hidden" id="waypoint_one" name="waypoint_one" value="<%= @waypoint_one %>">
+    <input type="hidden" id="waypoint_two" name="waypoint_two" value="<%= @waypoint_two %>">
+    <label for="starting_point">Starting from: </label>
+    <input type="text" id="starting_point" name="starting_point" readonly>
+    <label for="total_distance">Total distance: </label>
+    <input type="text" id="total_distance" name="total_distance" readonly>
+    <input type="submit" value="Save route">
+  </form>
+
+  <button><a href="/route">Re-make route</a></button>
+
   <div id="map-canvas"></div>
   <div id="directions_panel"></div>
 </div>

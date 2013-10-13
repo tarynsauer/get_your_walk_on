@@ -1,0 +1,18 @@
+<h1>Saved walks</h1>
+
+<table>
+<tr>
+  <th>Date</th>
+  <th>Starting point</th>
+  <th>Distance</th>
+  <th>Map</th>
+</tr>
+<% @walks.each do |w| %>
+<tr>
+  <td><%= w.created_at %></td>
+  <td><%= w.starting_point %></td>
+  <td><%= w.distance %></td>
+  <td></td>
+</tr>
+<% end %>
+</table>

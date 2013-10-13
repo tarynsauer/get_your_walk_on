@@ -69,7 +69,7 @@ input, select {
 
 #map-canvas-start {
   height: 250px;
-  width: 400px;
+  width: 300px;
   display: block;
   border: 2px solid gray;
   margin-left: 0;

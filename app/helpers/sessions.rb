@@ -1,3 +1,13 @@
+def current_user
+  if session[:user_id]
+    @current_user ||= User.find_by_id(session[:user_id])
+  end
+end
+
+def logged_in?
+  !current_user.nil?
+end
+
 def oauth_consumer
   raise RuntimeError, "You must set TWITTER_KEY and TWITTER_SECRET in your server environment." unless ENV['TWITTER_KEY'] and ENV['TWITTER_SECRET']
   @consumer ||= OAuth::Consumer.new(

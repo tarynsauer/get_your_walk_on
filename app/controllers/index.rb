@@ -33,11 +33,11 @@ get '/sign_out' do
 end
 
 get '/map' do
-  erb :map, layout: false
+  erb :map
 end
 
 get '/route' do
-  erb :route, layout:false
+  erb :route
 end
 
 #POST------------------------------------------------------------------

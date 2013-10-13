@@ -1,0 +1,23 @@
+require 'json'
+
+#GET------------------------------------------------------------------
+
+get '/walks' do
+@walks = User.find(current_user.id).walks
+erb :'/walks/index'
+end
+
+#POST------------------------------------------------------------------
+
+post '/walks/create' do
+walk = Walk.new(user_id: params["user_id"],
+                 latitude: params["latitude"].to_f,
+                 longitude: params["longitude"].to_f,
+                 waypoint_1: params["waypoint_one"].to_f,
+                 waypoint_2: params["waypoint_two"].to_f,
+                 distance: params["total_distance"],
+                 starting_point: params["starting_point"])
+walk.save
+
+redirect to '/walks'
+end

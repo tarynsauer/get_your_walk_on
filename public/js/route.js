@@ -4,11 +4,9 @@ $(document).ready( function() {
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
-var homeLatitude = $('#latitude').html();
-var homeLongitude = $('#longitude').html();
+var homeLatitude = $('#latitude').val();
+var homeLongitude = $('#longitude').val();
 home = new google.maps.LatLng(homeLatitude,homeLongitude);
-// var home = new google.maps.LatLng(41.8828773,-87.6282421);
-
 
 function initialize() {
   directionsDisplay = new google.maps.DirectionsRenderer();
@@ -21,18 +19,16 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   directionsDisplay.setMap(map);
 }
-  var waypoint_one = $('#waypoint_one').html();
+  var waypoint_one = $('#waypoint_one').val();
   console.log(waypoint_one);
-  var waypoint_two = $('#waypoint_two').html();
+  var waypoint_two = $('#waypoint_two').val();
   console.log(waypoint_two);
   var waypoints = [];
             waypoints.push({
-                // location: "41.8789000,-87.6358000",
                 location: waypoint_one,
                 stopover: false
             });
             waypoints.push({
-                // location: "41.8827024,-87.6193938",
                 location: waypoint_two,
                 stopover: false
             });
@@ -48,14 +44,10 @@ function initialize() {
     if (status == google.maps.DirectionsStatus.OK) {
       directionsDisplay.setDirections(response);
       var route = response.routes[0];
-      var summaryPanel = document.getElementById('directions_panel');
-      summaryPanel.innerHTML = '';
-      // For each route, display summary information.
       for (var i = 0; i < route.legs.length; i++) {
         var routeSegment = i + 1;
-        summaryPanel.innerHTML += '<b>Starting from: ' + '</b>';
-        summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-        summaryPanel.innerHTML += '<b>Total distance: ' + '</b>' + route.legs[i].distance.text + '<br><br>';
+        $('#starting_point').val(route.legs[i].end_address);
+        $('#total_distance').val(route.legs[i].distance.text);
       }
     }
   });
