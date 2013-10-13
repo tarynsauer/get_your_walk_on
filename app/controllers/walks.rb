@@ -9,7 +9,7 @@ end
 
 get "/walks/show/:id" do
   @walk = Walk.find(params["id"])
-  erb :'/walks/show'
+  erb :'/walks/show', layout:false
 end
 
 #POST------------------------------------------------------------------

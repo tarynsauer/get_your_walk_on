@@ -1,1 +1,33 @@
-<h1>Your walk</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/application.css">
+    <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ8F1F_8mW3bF1cYyx-kug1O7HsBZ3EHk&sensor=true">
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/js/application.js"></script>
+    <script src="/js/route.js"></script>
+  </head>
+<body>
+  <%= erb :_header %>
+  <div class="container">
+  <h1>Here's your route:</h1>
+  <form name="input" id="points" action="/walks/create" method="post">
+    <input type="hidden" name="user_id" value="<%= @walk.user.id %>">
+    <input type="hidden" id="latitude" name="latitude" value="<%= @walk.latitude %>">
+    <input type="hidden" id="longitude" name="longitude" value="<%= @walk.longitude %>">
+    <input type="hidden" id="waypoint_one" name="waypoint_one" value="<%= @walk.waypoint_1 %>">
+    <input type="hidden" id="waypoint_two" name="waypoint_two" value="<%= @walk.waypoint_2 %>">
+    <label for="starting_point">Starting from: <%= @walk.starting_point %></label>
+    <label for="total_distance">Total distance: <%= @walk.distance %></label>
+  </form>
+
+<!--   <a id="refreshRoute" href="/">Re-make route</a>
+ -->
+  <div id="map-canvas"></div>
+</div>
+</body>
+</html>

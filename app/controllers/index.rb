@@ -89,7 +89,6 @@ post '/route' do
   latitude3 = @latitude - (rand(4) * val)
   longitude3 = @longitude - (rand(4) * val)
 
-  # home         = "#{latitude}, #{longitude}"
   @waypoint_one = "#{latitude2}, #{longitude2}"
   @waypoint_two =  "#{latitude3}, #{longitude3}"
 

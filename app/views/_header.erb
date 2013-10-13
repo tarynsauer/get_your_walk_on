@@ -1,7 +1,8 @@
 <header>
+    <a href="/">Home</a>
   <% if logged_in? %>
-    <a href="/sign_out">Sign Out</a>
     <a href="/walks">Profile</a>
+    <a href="/sign_out">Sign Out</a>
   <% else %>
     <a href="/sign_in">Sign In with Twitter</a>
   <% end %>
