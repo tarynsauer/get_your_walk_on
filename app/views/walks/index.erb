@@ -6,13 +6,18 @@
   <th>Starting point</th>
   <th>Distance</th>
   <th>Map</th>
+  <th>Delete</th>
 </tr>
 <% @walks.each do |w| %>
 <tr>
   <td><%= w.created_at %></td>
   <td><%= w.starting_point %></td>
   <td><%= w.distance %></td>
-  <td></td>
+  <td><a href="/walks/show/<%= w.id %>">Show route</a></td>
+  <td><form action="/walks/destroy" method="post">
+  <input type="hidden" name="id" value="<%= w.id %>" />
+  <input type="submit" value="Delete route" />
+</form></td>
 </tr>
 <% end %>
 </table>

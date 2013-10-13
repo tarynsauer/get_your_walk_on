@@ -3,8 +3,13 @@ require 'json'
 #GET------------------------------------------------------------------
 
 get '/walks' do
-@walks = User.find(current_user.id).walks
-erb :'/walks/index'
+  @walks = User.find(current_user.id).walks
+  erb :'/walks/index'
+end
+
+get "/walks/show/:id" do
+  @walk = Walk.find(params["id"])
+  erb :'/walks/show'
 end
 
 #POST------------------------------------------------------------------
@@ -20,4 +25,10 @@ walk = Walk.new(user_id: params["user_id"],
 walk.save
 
 redirect to '/walks'
+end
+
+post '/walks/destroy' do
+  walk = Walk.find(params["id"])
+  walk.destroy
+  redirect to '/walks'
 end

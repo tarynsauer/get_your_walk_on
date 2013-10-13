@@ -1,7 +1,8 @@
 <header>
   <% if logged_in? %>
-    <button><a href="/sign_out">Sign Out</a></button>
+    <a href="/sign_out">Sign Out</a>
+    <a href="/walks">Profile</a>
   <% else %>
-    <button><a href="/sign_in">Sign In with Twitter</a></button>
+    <a href="/sign_in">Sign In with Twitter</a>
   <% end %>
 </header>
