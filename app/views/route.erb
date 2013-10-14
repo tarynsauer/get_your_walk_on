@@ -7,11 +7,11 @@
     <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&sensor=true">
     </script>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="/js/application.js"></script>
     <script src="/js/route.js"></script>
-
-</head>
+ß</head>
 <body>
   <%= erb :_header %>
   <div class="container">
@@ -28,7 +28,7 @@
     <input type="text" id="total_distance" name="total_distance" readonly>
     <input type="submit" class="submitButton" value="Save route">
   </form>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-via="<%= session[:username] %>" data-size="large" data-hashtags="getyourwalkon">Tweet</a>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-text="testing" data-via="<%= session[:username] %>" data-size="large" data-hashtags="getyourwalkon">Tweet</a>
   <div id="map-canvas"></div>
 </div>
 </body>

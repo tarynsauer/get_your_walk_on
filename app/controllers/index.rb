@@ -17,8 +17,6 @@ get '/auth' do
      oauth_token: User.find(session[:user_id]).oauth_token,
      oauth_token_secret: User.find(session[:user_id]).oauth_secret
      )
-  p session[:username] = @client.user_timeline.first[:user][:screen_name]
-  p session[:profile_image_url] = @client.user_timeline.first[:user][:profile_image_url]
 erb :index
 
 end
