@@ -1,7 +1,7 @@
 .container {
-  margin: 20px auto;
-  width: 600px;
-  height: 100%;
+  margin-left: 20px;
+  width: 90%;
+  height: 80%;
   padding: 0px 20px 20px 20px;
 }
 
@@ -12,7 +12,7 @@ body { height: 100%;
        padding: 0 }
 
 h1 {
-  color: #2d525d;
+  color: #4f6267;
 }
 
 th {
@@ -28,44 +28,39 @@ label {
 input, select {
   display: block;
   margin: 10px 0px;
-  border-top:   2px solid #a3ceda;
-  border-left:    2px solid #a3ceda;
-  border-right:   2px solid #4f6267;
-  border-bottom:    2px solid #4f6267;
-  padding:    10px 20px !important;
-  font-size:    1.2em;
+  border-top:   1px solid #a3ceda;
+  border-left:    1px solid #a3ceda;
+  border-right:   1px solid #4f6267;
+  border-bottom:   1px solid #4f6267;
+  padding:    3px 6px !important;
+  font-size:    1em;
 }
 
 .submitButton
 {
-  border-top:   2px solid #a3ceda;
-  border-left:    2px solid #a3ceda;
-  border-right:   2px solid #4f6267;
-  border-bottom:    2px solid #4f6267;
-  padding:    10px 20px !important;
-  font-size:    1.2em;
+  border-top:   1px solid #a3ceda;
+  border-left:    1px solid #a3ceda;
+  border-right:   1px solid #4f6267;
+  border-bottom:   1px solid #4f6267;
+  padding:    3px 6px !important;
+  font-size:    1em;
   background-color: #c4f1fe;
   font-weight:    bold;
   color:      #2d525d;
+  text-decoration: none;
 }
+
 #map-canvas {
-  height: 35%;
-  width: 35%;
-  margin: auto;
-  display: block;
-  border: 3px solid black; }
+  height: 325px;
+  max-width: 375px;
+  border: 2px solid gray;
+  padding-top: 10px;
+  margin: 20px 0;
+ }
 
 .invisible {
   display: none;
 }
-
-#map-canvas {
-  height: 80%;
-  width: 80%;
-  border: 2px solid gray;
-  margin: auto;
-  padding-top: 10px;
- }
 
 #map-canvas-start {
   height: 250px;
@@ -75,8 +70,35 @@ input, select {
   margin-left: 0;
  }
 
-#directions_panel {
-  margin:20px;
-  font-size: 1.3em;
-  background-color:#FFEE77;"
+.welcome {
+  display: inline;
+  margin-right: 20px;
+  margin-left: 20px;
+  color: white;
 }
+
+.welcomeImage {
+  margin-left: 20px;
+}
+.name {
+  color: orange;
+}
+
+header {
+  background-color: #464646;
+  padding: 10px 0;
+  color: white;
+}
+
+header a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #a3ceda;
+}
+
+/* TABLE STYLES */
+

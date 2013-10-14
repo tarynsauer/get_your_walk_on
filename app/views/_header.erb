@@ -1,9 +1,11 @@
 <header>
-    <a href="/">Home</a>
   <% if logged_in? %>
-    <a href="/walks">Profile</a>
+  <img src="<%= session[:profile_image_url] %>" class="welcomeImage" height="36" width="36">
+  <p class="welcome">Hello, <span class="name"><%= session[:username] %></span></p>
+    <a href="/">Home</a>
+    <a href="/walks">Your walks</a>
     <a href="/sign_out">Sign Out</a>
   <% else %>
-    <a href="/sign_in">Sign In with Twitter</a>
+    <a href="/sign_in" class="welcome">Sign In with Twitter</a>
   <% end %>
 </header>

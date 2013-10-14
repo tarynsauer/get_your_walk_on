@@ -26,11 +26,9 @@
     <input type="text" id="starting_point" name="starting_point" readonly>
     <label for="total_distance">Total distance: </label>
     <input type="text" id="total_distance" name="total_distance" readonly>
-    <input type="submit" value="Save route">
+    <input type="submit" class="submitButton" value="Save route">
   </form>
-
-<!--   <a id="refreshRoute" href="/">Re-make route</a>
- -->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-via="<%= session[:username] %>" data-size="large" data-hashtags="getyourwalkon">Tweet</a>
   <div id="map-canvas"></div>
 </div>
 </body>

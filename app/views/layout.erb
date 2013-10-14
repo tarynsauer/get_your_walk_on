@@ -15,13 +15,15 @@
   <title>Get your walk on</title>
 </head>
 <body>
-  <%= erb :_header %>
-  <% if logged_in? %>
-    <%= yield %>
-  <% else %>
-    <h1>Get your walk on!</h1>
-    <p>Sign in with Twitter to begin randomizing your walking routes</p>
-    <p>After creating your route, you can choose to save it and tweet it!</p>
-  <% end %>
+    <%= erb :_header %>
+    <% if logged_in? %>
+      <%= yield %>
+    <% else %>
+    <div class="container">
+      <h1>Get your walk on!</h1>
+      <p>Sign in with Twitter to begin randomizing your walking routes</p>
+      <p>After creating your route, you can choose to save it and tweet it!</p>
+    </div>
+    <% end %>
 </body>
 </html>

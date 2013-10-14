@@ -1,23 +1,23 @@
-<h1>Saved walks</h1>
+<div class="container">
+  <h1>Saved walks</h1>
 
-<table>
-<tr>
-  <th>Date</th>
-  <th>Starting point</th>
-  <th>Distance</th>
-  <th>Map</th>
-  <th>Delete</th>
-</tr>
-<% @walks.each do |w| %>
-<tr>
-  <td><%= w.created_at %></td>
-  <td><%= w.starting_point %></td>
-  <td><%= w.distance %></td>
-  <td><a href="/walks/show/<%= w.id %>">Show route</a></td>
-  <td><form action="/walks/destroy" method="post">
-  <input type="hidden" name="id" value="<%= w.id %>" />
-  <input type="submit" value="Delete route" />
-</form></td>
-</tr>
-<% end %>
-</table>
+  <table>
+  <tr>
+    <th>Map</th>
+    <th>Starting point</th>
+    <th>Distance</th>
+    <th>Delete</th>
+  </tr>
+  <% @walks.each do |w| %>
+  <tr>
+    <td><a href="/walks/show/<%= w.id %>" class="submitButton">Show route</a></td>
+    <td><%= w.starting_point %></td>
+    <td><%= w.distance %></td>
+    <td><form action="/walks/destroy" method="post">
+    <input type="hidden" name="id" value="<%= w.id %>" />
+    <input type="submit" class="submitButton" value="Delete route" />
+  </form></td>
+  </tr>
+  <% end %>
+  </table>
+</div>
