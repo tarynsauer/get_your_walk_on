@@ -2,7 +2,9 @@
   <h1>Get your walk on</h1>
   <div id="map-canvas-start"></div>
   <form id="walkForm" action="/route" method="POST">
-    <label for="location" class="invisible">Current location (address): </label><input type="text" id="location" name="location" class="invisible">
+    <div id="addressSection" class="invisible">
+      <label for="address"\>Current location (address): </label><input type="text" id="address" name="address">
+    </div>
     <label for="pace">Your approx. pace: </label>
     <select name="pace">
       <option value="slow">Slow</option>
@@ -10,7 +12,7 @@
       <option value="fast">Brisk</option>
       <option value="speed">Speed walking</option>
     </select>
-    <label for="time">Walking time (minutes): </label><input type="text" id="time" name="time">
+    <label for="time">Walking time (minutes): </label><input required type="text" pattern="\d+" id="time" name="time">
     <input type="hidden" id="latitude" name="latitude">
     <input type="hidden" id="longitude" name="longitude">
     <input type="submit" class="submitButton" value="Map my walking route!">

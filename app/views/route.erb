@@ -11,7 +11,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="/js/application.js"></script>
     <script src="/js/route.js"></script>
-ß</head>
+</head>
 <body>
   <%= erb :_header %>
   <div class="container">
@@ -22,13 +22,13 @@
     <input type="hidden" id="longitude" name="longitude" value="<%= @longitude %>">
     <input type="hidden" id="waypoint_one" name="waypoint_one" value="<%= @waypoint_one %>">
     <input type="hidden" id="waypoint_two" name="waypoint_two" value="<%= @waypoint_two %>">
+
     <label for="starting_point">Starting from: </label>
     <input type="text" id="starting_point" name="starting_point" readonly>
     <label for="total_distance">Total distance: </label>
     <input type="text" id="total_distance" name="total_distance" readonly>
     <input type="submit" class="submitButton" value="Save route">
   </form>
-  <a href="https://twitter.com/share" class="twitter-share-button" data-text="testing" data-via="<%= session[:username] %>" data-size="large" data-hashtags="getyourwalkon">Tweet</a>
   <div id="map-canvas"></div>
 </div>
 </body>

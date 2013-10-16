@@ -11,8 +11,6 @@ function initialize() {
   };
   map = new google.maps.Map(document.getElementById('map-canvas-start'),
       mapOptions);
-    console.log(map);
-    console.log(navigator.geolocation);
 
   // Try HTML5 geolocation
   if(navigator.geolocation) {
