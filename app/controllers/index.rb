@@ -17,12 +17,14 @@ get '/auth' do
      oauth_token: User.find(session[:user_id]).oauth_token,
      oauth_token_secret: User.find(session[:user_id]).oauth_secret
      )
+  timeline = @client.user_timeline.first
+  session[:username] = timeline[:user][:name]
+  session[:profile_image_url] = timeline[:user][:profile_image_url]
 erb :index
 
 end
 
 get '/sign_in' do
-  # the `request_token` method is defined in `app/helpers/oauth.rb`
   redirect request_token.authorize_url
 end
 
@@ -42,19 +44,11 @@ end
 #POST------------------------------------------------------------------
 
 post '/' do
-  # at this point in the code is where you'll need to create your user account and store the access token
-    @client = Twitter::Client.new(
+  @client = Twitter::Client.new(
        oauth_token: User.find(session[:user_id]).oauth_token,
        oauth_token_secret: User.find(session[:user_id]).oauth_secret
        )
   @client.update(params[:tweet])
-  @tweets = @client.user_timeline
-
-  if request.xhr?
-    erb :_tweets_stream, layout: false
-  else
-    erb :index
-  end
 end
 
 post '/route' do
