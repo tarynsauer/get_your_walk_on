@@ -9,6 +9,7 @@ end
 
 get "/walks/show/:id" do
   @walk = Walk.find(params["id"])
+  @message = "I randomized a " + @walk.distance + " walk"
   erb :'/walks/show', layout:false
 end
 
