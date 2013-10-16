@@ -21,12 +21,18 @@
     <input type="hidden" id="longitude" name="longitude" value="<%= @walk.longitude %>">
     <input type="hidden" id="waypoint_one" name="waypoint_one" value="<%= @walk.waypoint_1 %>">
     <input type="hidden" id="waypoint_two" name="waypoint_two" value="<%= @walk.waypoint_2 %>">
-    <label for="starting_point">Starting from: <%= @walk.starting_point %></label>
-    <label for="total_distance">Total distance: <%= @walk.distance %></label>
+    <table>
+      <tr>
+        <th>Starting from</th>
+        <th>Total distance</th>
+      </tr>
+      <tr>
+        <td><%= @walk.starting_point %></td>
+        <td><%= @walk.distance %></td>
+      </tr>
+    </table>
   </form>
 
-<!--   <a id="refreshRoute" href="/">Re-make route</a>
- -->
   <div id="map-canvas"></div>
 </div>
 </body>

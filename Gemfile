@@ -28,3 +28,5 @@ group :test do
   gem 'faker'
   gem 'rspec'
 end
+
+gem 'sinatra-assetpack', :require => 'sinatra/assetpack'

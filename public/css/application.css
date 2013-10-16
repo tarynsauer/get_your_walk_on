@@ -2,14 +2,14 @@
   margin-left: 20px;
   width: 90%;
   height: 80%;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 20px;
 }
 
 html { height: 100% }
 
 body { height: 100%;
        margin: 0;
-       padding: 0 }
+      }
 
 h1 {
   color: #4f6267;
@@ -100,5 +100,31 @@ header a:hover {
   color: #a3ceda;
 }
 
-/* TABLE STYLES */
+input#starting_point {
+  width: 365px;
+}
 
+input#location {
+  width: 365px;
+}
+
+input#total_distance {
+  width: 50px;
+}
+
+/* TABLE STYLES */
+table, td, tr, th {
+  border: 1px solid #ccc;
+}
+
+td {
+  padding: 2px 8px;
+}
+
+th {
+  padding: 6px 8px;
+  background-color: #767676;
+  color: white;
+  font-weight: normal;
+  font-size: 1em;
+}

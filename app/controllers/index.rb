@@ -77,8 +77,14 @@ post '/route' do
   # calculate coordinates before redirecting to
   # map page
 
-  @latitude = params[:latitude].to_f
-  @longitude = params[:longitude].to_f
+  # if params["address"]
+  #   walk = Walk.new(address: params["address"])
+  #   @latitude  = walk.latitude
+  #   @longitude = walk.longitude
+  # else
+    @latitude  = params[:latitude].to_f
+    @longitude = params[:longitude].to_f
+  # end
 
   val = (0.00007 * @distance)
 
